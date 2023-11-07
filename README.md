@@ -172,6 +172,3 @@
 2. mvn clean package 打包；
 3. 防止到 elasticsearch 目录的 plugins 文件夹下，并重启 ES；
 
-## 相关链接
-1. https://gitee.com/alexgaoyh/elasticsearch-similarity-tf
-2. https://gitee.com/alexgaoyh/elasticsearch-similarity-tf/releases/tag/7.17.6
