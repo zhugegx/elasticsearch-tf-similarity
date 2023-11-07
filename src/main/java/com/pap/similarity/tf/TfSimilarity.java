@@ -1,21 +1,18 @@
 package com.pap.similarity.tf;
 
-import org.apache.lucene.search.similarities.TFIDFSimilarity;
+import org.apache.lucene.search.similarities.ClassicSimilarity;
 
-public class TfSimilarity extends TFIDFSimilarity {
+public class TfSimilarity extends ClassicSimilarity {
 
-    @Override
-    public float tf(float v) {
-        return v;
+    private final static TfSimilarity sim = new TfSimilarity();
+
+    public static TfSimilarity getSim(){
+        return sim;
     }
 
     @Override
     public float idf(long l, long l1) {
-        return 1;
+        return 1f;
     }
 
-    @Override
-    public float lengthNorm(int i) {
-        return 1;
-    }
 }

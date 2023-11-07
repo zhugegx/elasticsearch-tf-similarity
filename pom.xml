@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.elasticsearch</groupId>
-    <artifactId>elasticsearch-similarity-tf</artifactId>
+    <artifactId>elasticsearch-tf-similarity</artifactId>
     <version>${elasticsearch.version}</version>
-    <name>elasticsearch-similarity-tf</name>
-    <description>elasticsearch-similarity-tf</description>
+    <name>elasticsearch-tf-similarity</name>
+    <description>elasticsearch similarity without idf</description>
     <packaging>jar</packaging>
     <inceptionYear>2023</inceptionYear>
 
@@ -56,7 +56,7 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <finalName>elasticsearch-similarity-tf-${elasticsearch.version}</finalName>
+                    <finalName>elasticsearch-tf-similarity-${elasticsearch.version}</finalName>
                     <appendAssemblyId>false</appendAssemblyId>
                     <outputDirectory>target</outputDirectory>
                     <descriptors>
