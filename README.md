@@ -3,7 +3,7 @@
 ## 自定义相似度算法(只考虑词频)
 
 &ensp;&ensp;在使用Elasticsearch的时候，针对排序结果，有些时候只关注对应的词出现的次数，相当于只考虑词频，这个时候就可以使用当前的插件。
-&ensp;&ensp;当前插件继承了 TFIDFSimilarity 类， TfSimilarity 只考虑了词频，并将其注册到插件中。
+&ensp;&ensp;当前插件继承了 ClassicSimilarity 类， TfSimilarity 屏蔽了idf参数的影响，并将其注册到插件中。
 &ensp;&ensp;实现结果如下，前两个代码段落分别是 mapping setting 配置文件，第三个代码段是请求，第四个代码段是结果。
 &ensp;&ensp;详细查看第四个代码段落的 _score 得分，发现 _score 的值等于请求参数'效果'在文本中出现的次数，至此证明当前插件有效。
 
